@@ -16,6 +16,6 @@ public class KafkaProcessorConfig {
 
     private KeyValue<String, String> reverseValue(String key, String value) {
         System.out.println("Received: key: "+key+", value: "+value);
-        return new KeyValue<>(key, new StringBuilder().append(value).reverse().toString());
+        return new KeyValue<>("Kafka-Processor", new StringBuilder().append(value).reverse().toString());
     }
 }
