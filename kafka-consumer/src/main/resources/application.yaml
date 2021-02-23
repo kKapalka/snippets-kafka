@@ -6,7 +6,7 @@ spring:
           application-id: 1
           brokers: 127.0.0.1:9092
       bindings:
-        consume-in-0:
-          destination: message-in
+        consumer-in-0:
+          destination: message-out
 server:
   port: 1339
