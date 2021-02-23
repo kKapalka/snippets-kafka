@@ -2,5 +2,4 @@ rootProject.name = 'snippets'
 include 'kafka-producer'
 include 'kafka-consumer'
 include 'kafka-processor'
-include 'kafka-processor'
 
