@@ -1,6 +1,7 @@
 package org.example.snippets.kafka.producer;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Supplier;
 import org.springframework.context.annotation.Bean;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class KafkaProducer {
 
-    List<String> messagesToSend = new ArrayList<>();
+    List<String> messagesToSend = Collections.synchronizedList(new ArrayList<>());
 
     @Bean
     public Supplier<String> producer(){
